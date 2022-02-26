@@ -31,7 +31,7 @@ async function insertRowsAsStream(messages) {
         rowsList = messages;
     }
 
-    await bigquery.dataset("bq_poc").table("txn_msg").insert(rowsList);
+    await bigquery.dataset("dataset3").table("employee").insert(rowsList);
     const response = `Record Inserted = ${rowsList.length}`;
     return response;
 }
